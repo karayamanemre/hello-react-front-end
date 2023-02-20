@@ -5,7 +5,7 @@ const apiUrl = 'http://localhost:3000/api/greetings';
 export const fetchGreeting = createAsyncThunk('greeting/fetchGreeting', () =>
   fetch(apiUrl)
     .then((response) => response.json())
-    .then((json) => json)
+    .then((json) => json),
 );
 
 const greetingSlice = createSlice({
